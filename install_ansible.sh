@@ -24,7 +24,8 @@ if [ $? == 0 ]; then
             if [ $? == 0 ]; then
                 echo "Ansible installed successfully."
                 echo "Creating ansible config file..."
-                touch /root/.ansible/ansible.config
+                touch /root/hosts | chmod 600 /root/hosts
+                mkdir /root/playbooks
 
                 echo "Script completed 100%."
             else
